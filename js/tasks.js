@@ -159,23 +159,7 @@ const ordered = 50;
 
 
 
-// const hasUserNumber = Number(prompt('enter numbers'));
 
-// if(hasUserNumber === 0) {
-//     alert('Очень жаль, приходите еще!');
-// } else if(hasUserNumber > 0 && hasUserNumber < 5) {
-    
-//     switch(hasUserNumber) {
-//         case 1:
-//         alert("Каталог хостелов") ;
-//         break;
-//         case 2:
-//         alert("Каталог бюджетных отелей");
-//         break;
-//     }
-// } else {
-//     alert('Неверный ввод, возможные варианты 1-5!');
-// }
 
 
 //==================== task 11 ============================
