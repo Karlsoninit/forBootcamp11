@@ -1,33 +1,230 @@
 'use strict'
 
 
-// let isActive = true;
-// isActive = false;
-// console.log(typeof isActive);
+// const add = function(a,b,c) {
+//     return a + b + c;
+// }
+
+// const result = add(1,2,3);
+// console.log(result);
+
+
+// const users = function(name = '"defoult"', age = '"i hope you have 18"') {
+//     console.log(`hello, my name is ${name} i old ${age}`);
+// }
+
+
+// users('Maksim', 25);
+
+
+// const sumFn = function() {
+//     const max = arguments.length;
+//     console.log(arguments)
+//     let start = 0;
+
+//     for(let i = 0; i < max; i++) {
+//         start += arguments[i];
+//     }
+//     return start;
+// }
+
+// console.log(sumFn(1,2,3,4,5))
+
+// const newFnArg = function()  {
+//     const arr = Array.from(arguments);
+//     console.log(arr)
+//     let total = 0;
+
+//     for(let key of arr) {
+//         total += key;
+//     }
+//     return total;
+// }
+
+// console.log(newFnArg(1,2,3,4,5))
+
+
+// const argFn = function(...rest) {
+//     console.log(rest);
+// }
+
+
+// console.log(argFn(1,2,3,4,5))
+
+
+// function showCentury(year) {
+//     let result = Math.ceil(year / 100);
+//     return `${year} рік - ${result} століття`;
+// }
+// console.log(showCentury(1988))
 
 
 
 
-// const f = null;
-// let a;
+// function b() {
+//     console.log('Выполняется [b]');
+//   }
 
+//   function a() {
+//     console.log('Начала выполняться [a]');
+//     b();
+//     console.log('Продолжила выполняться [a] после выхода из [b]');
+//   }
 
-// console.log(a)
-
-
-// let a = 5
-
-// console.log(typeof null);
-
-// const a = 11;
-// const b = 'hello';
-// const c = '5';
-// console.log(typeof a);
-// console.log(typeof b);
-// console.log(typeof c);
+//   console.log('Начал выполнение [global]');
+//   a();
+//   console.log('Продолжил выполняться [global] после выхода из [a]');
 
 
 
+//   let first = 10;
+//   let second = 4;
+
+//   function addTest(a,b) {
+//     return a + b;
+//   }
+
+//   console.log(addTest(first, second))
+
+
+//   const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
+
+// const isLoginValid = function (login) {
+//   return login.length >= 4 && login.length <= 16;
+// };
+
+// const isLoginUnique = function (allLogins, login) {
+//  return !logins.includes(login);
+// };
+
+// const addLogin = function (allLogins, login) {
+//   if (isLoginValid(login)) {
+//     if (isLoginUnique(allLogins, login)) {
+
+//       logins.push(login);
+//       console.log ('Логин успешно добавлен!');
+//     } else{
+//       console.log ('Такой логин уже используется!');
+//     }
+//   } else {
+//     console.log ('Ошибка! Логин должен быть от 4 до 16 символов');
+//   }
+// };
+
+
+// // // Вызовы функции для проверки
+// addLogin(logins, 'Ajax'); // 'Логин успешно добавлен!'
+// addLogin(logins, 'robotGoogles'); // 'Такой логин уже используется!'
+// addLogin(logins, 'Zod'); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+// addLogin(logins, 'jqueryisextremelyfast'); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+
+
+
+
+
+
+// // function getDivisors(num) {
+// // 	var arr = [];
+// // 	for (var i = 1; i <= num; i++) {
+// // 		if (num % i == 0) {
+// // 			arr.push(i);
+// // 		}
+// // 	}
+
+// // 	return arr;
+// // }
+
+// // alert(getDivisors(4));
+
+
+// var arr = [];
+// for (var i = 0; i < 10; i++) {
+// 	arr[i] = 'x';
+// }
+// console.log(arr);
+
+
+
+// const add2 = function(even) {
+//     return even % 2 === 0
+// };
+
+
+// const addResult = function(one) {
+//     if(add2()){
+//         console.log('Ok')
+//     }
+// }
+// addResult(add2(3));
+
+
+
+
+
+// function isEven(num) {
+// 	if (num % 2 == 0) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+
+// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// var result = [];
+// for (var i = 0; i < arr.length; i++) {
+// 	if(isEven(arr[i])) {
+// 		result.push(arr[i]);
+// 	}
+// }
+
+// console.log(result);
+
+
+
+
+
+// const add2 = function(num) {
+//     if (num % 2 == 0) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// };
+
+// let n = 7;
+
+// const addResult = function(one) {
+//     if(add2(n)){
+//         console.log('Ok')
+//     }
+//     console.log('no')
+// }
+// addResult(add2(3));
+
+
+
+
+
+
+// let res=0;
+// let num;
+// const arr = [];
+// do{
+//   num = prompt(`Enter num`);
+//   if(!isNaN(num) && num.length > 0){
+//   arr.push(num)
+//   console.log(arr)
+// }
+//   } while(num!==null);
+//   if(arr.length>0){
+//     for(let sum of arr){
+// res = res+Number(sum);
+//     }
+//   }
+
+
+// alert(`Сумма: ${res}`)
 
 
 
@@ -37,37 +234,78 @@
 
 
 
-// const show =  Number(prompt('number', 'only number!!!!!!!!!!!'));
-// let afterShow = Number(show);
-// let small = 18;
-// let about = "it's not Ok " + afterShow + "only after " + small ;
-// let about = `it's not Ok ${afterShow} only after "${small}" `; 
 
 
 
 
-// console.log("number", typeof afterShow);
-// console.log("number",afterShow);
-// console.log(typeof show);
-// console.log("string",show);
-
-// console.log(typeof show);
 
 
 
-// let showConfirm = confirm('are you sure');
-// console.log(showConfirm);
-
-// let numRandom = Math.floor(Math.random()*100);
-// console.log(numRandom);
 
 
-// let min = 10;
-// let max = 30;
-// if(min <= numRandom && max >= numRandom) {
-//     alert('Ok');
-// } else {
-//     alert('ne Ok');
+
+// const add = function(a,b,c) {
+//   return  a + b + c;
+// }
+
+
+// console.log(add(10, 25));
+// console.log(add(12,33,45))
+// console.log(add(4,5,6))
+
+
+
+
+
+// console.log(name(12,6)); //return name
+// age(); // return age
+
+
+
+
+
+
+
+
+
+
+// const name = function(a,b) {
+//    return a + b;
+// }
+
+// function age() {
+//     console.log('age')
+// }
+
+// console.log(name(12,6))
+
+
+
+
+
+// function name(a,b) {
+//     return  a + b
+// }
+
+// let new2 = name(1,50);
+// let new3 = name(2,2)
+
+// console.log(new3)
+// console.log(new2);
+
+// function result(a, b) {
+//     console.log(a);
+//     return a + b
+// }
+
+// const newResult = result(new2,10);
+
+// console.log(newResult);
+
+
+// for (let i = 0; i < mass; i++) {
+//     total += arguments[i];
+//     console.log(total);
 // }
 
 
@@ -75,65 +313,72 @@
 
 
 
-// const a = 10;
-// const b = 5;
-// let result
+
+// let total = 0;
+
+// function arg() {
+//     let mass = Array.from(arguments);
 
 
-// result = a / b;
-// console.log(result)
+//     for(let key of mass) {
+//         total += key;
+//     }
+//     return total;
+// }
 
-// console.log(result * 2);
-
-
-// let num = "";
-// let numTypeof =  +num;
-
-// let showNaN = typeof numTypeof;
-// console.log(showNaN);
-// console.log(Number.isNaN(numTypeof));
+// console.log(arg(1, 2, 3,3,4,6,8,965,33,2));
 
 
-// let num  = Number.parseFloat("23.4px");
-// console.log(num);
-// let px = "23px";
-// console.log(px);
+// console.log(total);
+
+// let copytotal = 0
+
+// function restMass(...arg) {
+
+//     for(let key of arg) {
+//         copytotal += key;
+//     }
+
+//     return copytotal;
+// }
+
+// restMass(1,6,33,77,9,0,334,3);
+// console.log(restMass(1,6,33,77,9,0,334,3));
 
 
+// let n = 30;
+
+// function newFn(b) {
+//     let n = 11;
+//     console.log(b + n)
+// }
+
+// newFn(10)
+
+// console.log(n)
 
 
-// const result = 0.1 + 0.2444;
-// console.log(result);
-// console.log( +result.toFixed(4) );
+// function fn(b) {
+//     return b % 2 === 0;
+// }
+// function fn2(b) {
+//     if(fn(b)){
+//         alert('Ok')
+//     } else {
+//         alert('no')
+//     }
+// }
 
+// fn2(3);
 
+{
 
-// console.log('max',Math.max(2,3,7,9,12));
-// console.log('min',Math.min(2,3,7,9,12))
+    const fn = b => {
+       return  b % 2 === 0
+    }
+    
+    const fn2 = b => fn(b)? alert('ok'): alert('no');
+    
+    fn2(4)
+}
 
-
-// console.log('5' - 3);
-// let showNum = 's' +  2;
-// console.log(showNum);
-// console.log(typeof showNum);
-
-
-
-
-let str = 'Hello my Friends';
-// console.log(str.toLocaleLowerCase());
-
-// let newMass = str.split(' ');
-// console.log(newMass[newMass.length -1]);
-
-// let mass = [1,2,3,4];
-// console.log(mass);
-
-// let масса = 10;
-
-// console.log(масса)
-// console.log(newMass);
-// console.log(newMass.includes('my'));
-// console.log(str.includes(""))
-console.log(str);
-console.log(str.indexOf('F'));
