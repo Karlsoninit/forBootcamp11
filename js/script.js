@@ -263,12 +263,6 @@
 
 
 
-
-
-
-
-
-
 // const name = function(a,b) {
 //    return a + b;
 // }
@@ -371,14 +365,68 @@
 
 // fn2(3);
 
-{
+// {
 
-    const fn = b => {
-       return  b % 2 === 0
-    }
-    
-    const fn2 = b => fn(b)? alert('ok'): alert('no');
-    
-    fn2(4)
+//     const fn = b => {
+//        return  b % 2 === 0
+//     }
+
+//     const fn2 = b => fn(b)? alert('ok'): alert('no');
+
+//     fn2(4)
+// }
+
+
+
+// let number = '123456';
+// let strin = number.split('');
+
+// for (let i = 0; i < strin.length; i++) {
+
+//     if (i % 2 !== 0) {
+
+//         let b = strin[i - 1];
+//         strin[i - 1] = strin[i];
+//         console.log(strin)
+//         strin[i] = b;
+
+//     }
+// }
+// console.log(strin);
+
+
+
+let str ='abcde abcde abcde';
+let newArr = [];
+
+let arr = str.split(' ');
+
+for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i].toUpperCase() + arr.substr(1))
+	newArr.push(first(arr[i]));
 }
+
+function first(str) {
+    // console.log(str);
+    // console.log(str[0].toUpperCase())
+    // console.log(str.slice(1));
+    
+    return str[0].toUpperCase() + str.substr(1);
+
+}
+
+console.log(newArr);
+
+function getDivisors(num) {
+	let arr = [];
+	for (var i = 1; i <= num; i++) {
+		if (num % i == 0) {
+			arr.push(i);
+		}
+	}
+	
+	return arr;
+}
+
+alert(getDivisors(12))
 
