@@ -1,0 +1,33 @@
+
+.btn-box {
+    display: flex;
+    padding: 20px 0 ;
+    border: 1px solid red;
+}
+
+button {
+    width: 100px;
+    background-color: pink;
+    height: 50px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .images {
+    display: grid;
+    width: 648px;
+    margin: 0 auto;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 320px);
+    grid-gap: 8px;
+    list-style: none;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  }
+  
