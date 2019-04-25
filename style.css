@@ -1,0 +1,33 @@
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .list {
+    margin: 0;
+    padding: 8px;
+    outline: 1px solid teal;
+  }
+  
+  .list li {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    font-size: 24px;
+    outline: 1px solid #212121;
+  }
+  
+  .list li:not(:last-child) {
+     margin-bottom: 8px;
+  }
+  
+  .list button {
+    margin-right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: inherit;
+  }
