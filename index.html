@@ -8,10 +8,93 @@
 </head>
 <body>
     
+<!-- 
+    <div class="root"></div>
 
 
 
 
+    <template id="about-me">
+        {{#each this}}
+        <ul>
+
+            <img src="{{img}}" alt="" width="300">
+            <div class="about">{{name}}</div>
+            <div class="number">{{number}}</div>
+            {{#if isActive}}
+            <div class="work">{{work}}</div>
+            {{/if}}
+        </ul>
+        {{/each}}
+    </template>     -->
+
+
+<!-- 
+<div class="team-list"></div>
+<template class="team">
+    {{#each this}}
+    <li>
+        <h1>Name : {{name}}</h1>
+        <p>i am :{{hero}}</p>
+        {{#if joyful}}
+        <p>mood :  😂 </p>
+        {{else}}
+        <p>mood :  🤬 </p>
+        {{/if}}
+
+        <ul>
+            {{#each strength}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </li>
+    {{/each}}
+</template> -->
+
+
+
+    <!-- <div class="container">
+        <div class="sold"></div>
+        <div class="menu">
+            <p class="text"></p>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+<input type="text" class="btn">
+
+
+<div class="list"></div>
+
+<template id="box">
+    {{#each this}}
+        {{#if done}}
+            <img src="{{img}}" alt="" width="300">
+            <h1 class="name">name :{{name}}</h1>
+            <p class="about">abut :{{about}}</p>
+            <p class="work"> work : {{work}}</p>
+            <p> 🤬 </p>
+        {{/if}}
+    {{/each}}
+</template>   
+
+
+
+
+
+
+<input type="text" class="input">
+<p class="output"></p>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="./js/script.js"></script>
     <!-- <script src="./js/task.js"></script> -->
 </body>
