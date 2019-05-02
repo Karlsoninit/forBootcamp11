@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fullview {
+    width: 500px;
+    height: 400px;
+}
+
+img {
+    width: 100%;
+}
+
+.preview {
+    width: 500px;
+    display: flex;
+}
