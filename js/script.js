@@ -121,6 +121,78 @@
 // });
 
 
+// function shooter(arrow,headshot, fail) {
+//     console.log('вы сделали выстрел')
+//     setTimeout(function(){
+//         Math.random() > .5 ? headshot('ффщ') : fail('вы промахнулись')
+//     },2000)
+
+// }
+
+
+// function beer() {
+//     console.log('beer')
+// }
+
+// function win () {
+//     console.log('win')
+// }
+
+// shooter({}, function() {
+//     console.log('вы попали')
+//     win()
+// }, function(miss) {
+//     console.error(miss)
+// })
+
+
+
+
+
+function shooter(arrow) {
+    console.log('вы сделали выстрел')
+    let promise = new Promise(function(resolve, reject){
+        setTimeout(function(){
+            Math.random() > .5 ? resolve('ффщ') : reject('вы промахнулись')
+        },2000)
+
+    }) 
+
+    return promise;
+
+}
+
+
+function beer() {
+    console.log('beer')
+}
+
+function win () {
+    console.log('win')
+}
+
+// shooter({}, function() {
+//     console.log('вы попали')
+//     win()
+// }, function(miss) {
+//     console.error(miss)
+// })
+
+
+shooter({}).then(() => console.log('вы попали'))
+            .then(win)
+            .catch(miss => console.log(miss))
+
+
+
+
+
+
+
+
+
+
+
 //------------------- new 
 
 
@@ -471,34 +543,34 @@
 
 
 
-let prize = Math.floor(Math.random() * 2);
-// console.log(prize);
+// let prize = Math.floor(Math.random() * 2);
+// // console.log(prize);
 
 
 
-function shooter(arrow) {
-	console.log('вы сделали выстрел');
+// function shooter(arrow) {
+// 	console.log('вы сделали выстрел');
 
-	const promise = new Promise((resolve, reject) => {
-		setTimeout(function () {
-			Math.random() > .5 ? resolve('вы попали') : reject('вы промахнулись');
-		}, 300)
-	})
-	return promise;
-}
+// 	const promise = new Promise((resolve, reject) => {
+// 		setTimeout(function () {
+// 			Math.random() > .5 ? resolve('вы попали') : reject('вы промахнулись');
+// 		}, 300)
+// 	})
+// 	return promise;
+// }
 
 
-function win() {
-	console.log('вы выиграли')
-}
+// function win() {
+// 	console.log('вы выиграли')
+// }
 
-function prizes() {
-	if (prize === 1) {
-		console.log('Beer !!!')
-	} else {
-		console.log('Vodka')
-	}
-}
+// function prizes() {
+// 	if (prize === 1) {
+// 		console.log('Beer !!!')
+// 	} else {
+// 		console.log('Vodka')
+// 	}
+// }
 
 
 
@@ -512,12 +584,12 @@ function prizes() {
 // 		console.log(miss)
 // 	})
 
-shooter({})
-	.then(head => console.log(head))
-	.then(win)
-	.then(prizes)
-	.catch(miss => console.log(miss))
-	.finally(() => console.log('finished!'));
+// shooter({})
+// 	.then(head => console.log(head))
+// 	.then(win)
+// 	.then(prizes)
+// 	.catch(miss => console.log(miss))
+// 	.finally(() => console.log('finished!'));
 
 
 //-------------------- task 01------------
@@ -536,50 +608,47 @@ shooter({})
  * Сделай так, чтобы пока изменение темы запушено, кнопка Start была не активна.
  */
 
-const colors = [
-	"#FFFFFF",
-	"#2196F3",
-	"#4CAF50",
-	"#FF9800",
-	"#009688",
-	"#795548"
-];
+// const colors = [
+// 	"#FFFFFF",
+// 	"#2196F3",
+// 	"#4CAF50",
+// 	"#FF9800",
+// 	"#009688",
+// 	"#795548"
+// ];
 
 
-let body = document.querySelector('body')
-console.log(body);
+// let body = document.querySelector('body')
+// console.log(body);
 
-let start = document.querySelector('[data-action="start"]')
-let stop = document.querySelector('[data-action="stop"]')
+// let start = document.querySelector('[data-action="start"]')
+// let stop = document.querySelector('[data-action="stop"]')
 
-function showCollor() {
-	let colorsRandom = colors[Math.floor(Math.random() * colors.length)];
-	body.style.background = colorsRandom;
-}
-
-
-function stop2() {
-	 clearInterval(newStop)
-}
-let newStop;
-function rand() {
-	newStop = setInterval(showCollor, 1000)
-}
-
-function startCount(event) {
-	console.log(event.target)
-	if (event.target.getAttribute('data-action') === 'start') {
-		rand();
-	} else if (event.target.getAttribute('data-action') === 'stop') {
-		console.log('stop')
-		stop2()
-	}
-}
-
-body.addEventListener('click', startCount);
+// function showCollor() {
+// 	let colorsRandom = colors[Math.floor(Math.random() * colors.length)];
+// 	body.style.background = colorsRandom;
+// }
 
 
+// function stop2() {
+// 	 clearInterval(newStop)
+// }
+// let newStop;
+// function rand() {
+// 	newStop = setInterval(showCollor, 1000)
+// }
 
+// function startCount(event) {
+// 	console.log(event.target)
+// 	if (event.target.getAttribute('data-action') === 'start') {
+// 		rand();
+// 	} else if (event.target.getAttribute('data-action') === 'stop') {
+// 		console.log('stop')
+// 		stop2()
+// 	}
+// }
+
+// body.addEventListener('click', startCount);
 
 
 
@@ -596,61 +665,64 @@ body.addEventListener('click', startCount);
 
 
 
-document.addEventListener('keyup', event => {
-	const keyName = event.key;
-	if(keyName === 'f') {
-		alert('Yes baby')
-	}
-	console.log(keyName);
-})
 
 
 
-let form = document.querySelector('.form');
-let text = document.querySelector('.text');
-console.log(text)
-
-function hear(event) {
-console.log(event.target)
-	text.textContent = form.value;
-}
-
-form.addEventListener('input', hear);
-
-
-let textAbout = document.querySelector('.about');
-
-
-const about = {
-	name: 'Maksim',
-	showName() {
-		console.log(this.name)
-		textAbout.textContent = this.name;
-	}
-}
-
-textAbout.addEventListener('click', about.showName)
+// document.addEventListener('keyup', event => {
+// 	const keyName = event.key;
+// 	if(keyName === 'f') {
+// 		alert('Yes baby')
+// 	}
+// 	console.log(keyName);
+// })
 
 
 
-function showClick (event) {
-	console.log(event.clientX,event.clientY )
-}
+// let form = document.querySelector('.form');
+// let text = document.querySelector('.text');
+// console.log(text)
 
-document.addEventListener('click', showClick);
+// function hear(event) {
+// console.log(event.target)
+// 	text.textContent = form.value;
+// }
 
-let giveBtn = document.querySelector('.btn');
-
- giveBtn.onclick = () => alert('ok')
-
- let one = document.querySelector('.one'),
- two = document.querySelector('.two'),
- three = document.querySelector('.three');
+// form.addEventListener('input', hear);
 
 
- one.onclick = () => alert('one')
- two.onclick = () => alert('two')
- three.onclick = (event) => {
-	 event.stopPropagation();
-	 alert('three')
- }
+// let textAbout = document.querySelector('.about');
+
+
+// const about = {
+// 	name: 'Maksim',
+// 	showName() {
+// 		console.log(this.name)
+// 		textAbout.textContent = this.name;
+// 	}
+// }
+
+// textAbout.addEventListener('click', about.showName)
+
+
+
+// function showClick (event) {
+// 	console.log(event.clientX,event.clientY )
+// }
+
+// document.addEventListener('click', showClick);
+
+// let giveBtn = document.querySelector('.btn');
+
+//  giveBtn.onclick = () => alert('ok')
+
+//  let one = document.querySelector('.one'),
+//  two = document.querySelector('.two'),
+//  three = document.querySelector('.three');
+
+
+//  one.onclick = () => alert('one')
+//  two.onclick = () => alert('two')
+//  three.onclick = (event) => {
+// 	 event.stopPropagation();
+// 	 alert('three')
+//  }
